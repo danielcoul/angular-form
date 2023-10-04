@@ -63,7 +63,8 @@
     <div class="row">
       <div class="col-md-6 mb-3">
         <label for="phoneId">Téléphone</label>
-        <input type="tel" class="form-control" formControlName="phone" placeholder="Numéro téléphone">
+        <input type="tel" class="form-control" formControlName="phone" placeholder="Numéro téléphone"
+        [ngClass]="{'is-invalid':registerForm.get('phone')?.errors?.['required']}">
       </div>
       <div class="col-md-6 mb-3">
       <label for="">Recevoir notification</label>
